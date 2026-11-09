@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>YOUR BRAND NAME — Bespoke Indian Escapes & Private Aviation</title>
+  <meta name="description"
+    content="YOUR BRAND NAME curates private chartered expeditions, royal palace sanctuaries, and ultra-luxe journeys across Kashmir, Kerala, Rajasthan, Himachal, and the Andaman Islands." />
+  <meta name="keywords"
+    content="luxury travel India, private jet charter India, Dal Lake Kashmir houseboats, Rajasthan palace suites, Kerala backwaters kettuvallam, Andaman Havelock luxury, Spiti Valley" />
+  <meta name="theme-color" content="#041013" />
+
+  <!-- OpenGraph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="YOUR BRAND NAME — Bespoke Indian Escapes" />
+  <meta property="og:description"
+    content="Architects of transcendent Indian journeys. Private aviation, secluded sanctuaries, and singular geography." />
+  <meta property="og:image" content="/images/hero-kashmir-4k.jpg" />
+
+  <!-- Google Fonts Preconnect -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN with Forms & Container Queries -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- Tailwind Configuration -->
+  <script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cyan: '#2ee6c8',
+              cyanHover: '#26cbb0',
+              deepTeal: '#07181c',
+              oceanNavy: '#041013',
+              surfaceTeal: '#092126',
+              borderMuted: 'rgba(46, 230, 200, 0.15)',
+              muted: 'rgba(255, 255, 255, 0.45)',
+              lineActive: '#2ee6c8',
+              lineInactive: 'rgba(255, 255, 255, 0.25)',
+            }
+          },
+          letterSpacing: {
+            superwide: '0.35em',
+            ultrawide: '0.45em',
+            mega: '0.6em',
+          },
+          fontFamily: {
+            sans: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+            serif: ['Cormorant Garamond', 'Playfair Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Styles for Atmosphere & Details -->
+  <script type="module" crossorigin src="/assets/index-BgNZURSp.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BB_x8O4h.css">
+</head>
+
+<body class="min-h-screen text-white antialiased selection:bg-brand-cyan selection:text-gray-900 bg-[#041013]">
+
+  <!-- ========================================== -->
+  <!-- HERO VIEWPORT SECTION (4K SHARP AERIAL SCENERY & ROUTE MAP) -->
+  <!-- ========================================== -->
+  <div class="relative min-h-screen flex flex-col justify-between overflow-hidden" id="hero-section">
+    <!-- BEGIN: HeroBackground with 4K Image & Multi-layer Parallax -->
+    <div class="absolute inset-0 -z-10 overflow-hidden" id="hero-background-wrapper"
+      data-purpose="hero-background-wrapper">
+      <img id="hero-bg-img" alt="4K Aerial Dal Lake Kashmir"
+        class="w-full h-full object-cover object-center scale-105 transform filter brightness-95 contrast-[1.05] transition-all duration-1000 ease-out"
+        data-purpose="aerial-drone-scenery" src="/images/hero-kashmir-4k.jpg" />
+      <div class="absolute inset-0 bg-teal-950/30 mix-blend-multiply pointer-events-none"></div>
+      <div class="absolute inset-0 bg-vignette pointer-events-none"></div>
+    </div>
+    <!-- END: HeroBackground -->
+
+    <!-- BEGIN: Interactive Route Map SVG Layer -->
+    <div id="hero-route-map-container"
+      class="absolute inset-0 -z-5 pointer-events-none transition-opacity duration-700">
+      <!-- Injected by RouteMapEngine -->
+    </div>
+    <!-- END: Interactive Route Map SVG Layer -->
+
+    <!-- BEGIN: NavigationHeader -->
+    <header class="w-full px-6 sm:px-10 md:px-14 lg:px-20 pt-8 pb-4 flex items-center justify-between z-30"
+      data-purpose="site-header">
+      <!-- Left: Hamburger Drawer Toggle & Ambient Audio Switch -->
+      <div class="flex items-center gap-4 sm:gap-6">
+        <button id="hamburger-menu-btn" aria-label="Open Navigation Menu"
+          class="group flex flex-col justify-center items-start gap-[6px] w-10 h-10 p-2 focus:outline-none transition-all duration-300 rounded-full hover:bg-white/5 cursor-pointer"
+          type="button">
+          <span
+            class="w-7 h-[2px] bg-white transition-all duration-300 group-hover:w-8 group-hover:bg-brand-cyan"></span>
+          <span
+            class="w-5 h-[2px] bg-white transition-all duration-300 group-hover:w-8 group-hover:bg-brand-cyan"></span>
+        </button>
+
+        <!-- Ambient Ocean Soundscape Toggle (Rounded) -->
+        <button id="ambient-audio-toggle" type="button" aria-label="Toggle ocean soundscape"
+          title="Play Ambient Soundscape"
+          class="btn-rounded hidden sm:flex items-center gap-2 text-white/70 hover:text-brand-cyan text-[10px] tracking-widest font-mono uppercase transition-colors px-3.5 py-1.5 border border-white/15 hover:border-brand-cyan/40 cursor-pointer">
+          <span class="audio-bars flex items-center gap-0.5 h-3">
+            <span class="w-[2px] h-2 bg-current inline-block"></span>
+            <span class="w-[2px] h-3 bg-current inline-block"></span>
+            <span class="w-[2px] h-1.5 bg-current inline-block"></span>
+          </span>
+          <span class="audio-label hidden md:inline">SOUND: OFF</span>
+        </button>
+      </div>
+
+      <!-- Center: Brand Logo -->
+      <a class="flex flex-col items-center select-none text-center cursor-pointer group" data-purpose="brand-logo"
+        href="#hero-section">
+        <span
+          class="text-2xl md:text-3xl font-light tracking-ultrawide text-white uppercase leading-none pl-2 group-hover:text-brand-cyan transition-colors">
+          YOUR BRAND NAME
+        </span>
+        <span class="text-[9px] md:text-[10px] tracking-mega text-white/70 uppercase mt-1 pl-2 font-medium">
+          BESPOKE INDIAN ESCAPES
+        </span>
+      </a>
+
+      <!-- Right: Currency Switcher & Search Button -->
+      <div class="flex items-center gap-3 sm:gap-5">
+        <!-- Currency Dropdown (Rounded Pill) -->
+        <div class="hidden sm:block">
+          <select data-currency-select aria-label="Select Currency"
+            class="btn-rounded bg-black/40 border border-white/20 text-white/80 hover:text-white text-[10px] tracking-wider py-1.5 px-3 focus:border-brand-cyan focus:ring-0 uppercase cursor-pointer">
+            <option class="bg-[#041013] text-white" value="INR">INR (₹)</option>
+            <option class="bg-[#041013] text-white" value="EUR">EUR (€)</option>
+            <option class="bg-[#041013] text-white" value="USD">USD ($)</option>
+            <option class="bg-[#041013] text-white" value="GBP">GBP (£)</option>
+          </select>
+        </div>
+
+        <!-- Search Button (Rounded) -->
+        <button id="search-open-btn" aria-label="Search destinations"
+          class="w-10 h-10 rounded-full flex items-center justify-center text-white hover:text-brand-cyan hover:bg-white/5 transition-all duration-300 focus:outline-none cursor-pointer"
+          type="button">
+          <svg class="w-5 h-5 stroke-[1.8]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+            <path d="M21 21l-4.35-4.35m1.85-5.15a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <!-- END: NavigationHeader -->
+
+    <!-- BEGIN: HeroMainContent -->
+    <main class="w-full flex-1 flex flex-col justify-center items-center text-center px-6 md:px-12 my-auto z-20 py-10"
+      id="hero-main-content" data-purpose="hero-content">
+      <div id="hero-text-container" class="animate-hero-entrance max-w-4xl mx-auto">
+        <h1 id="hero-destination-title"
+          class="text-4xl sm:text-6xl md:text-7xl lg:text-[5.3rem] font-medium tracking-superwide text-white uppercase leading-none pl-3 drop-shadow-[0_8px_20px_rgba(0,0,0,0.35)] transition-all duration-500">
+          KASHMIR
+        </h1>
+        <h2 id="hero-destination-tagline"
+          class="text-xs sm:text-sm md:text-sm tracking-ultrawide text-white/90 uppercase font-light mt-4 pl-2 drop-shadow transition-all duration-500">
+          HEAVEN ON EARTH
+        </h2>
+        <p id="hero-destination-description"
+          class="max-w-xl mx-auto text-xs sm:text-sm md:text-[13px] leading-relaxed text-white/80 font-light mt-4 px-4 drop-shadow transition-all duration-500">
+          Kashmir has been celebrated for centuries as paradise on earth – its tranquil Dal Lake shikaras, cedar pine
+          valleys, and snow-crowned Gulmarg summits.
+        </p>
+        <div class="mt-8 sm:mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a class="btn-rounded inline-block bg-[#2ee6c8] hover:bg-[#25c7ad] text-[#072428] font-semibold text-xs tracking-wider uppercase px-9 py-3.5 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-[0_10px_25px_rgba(46,230,200,0.35)] active:translate-y-0 text-center"
+            data-purpose="cta-explore-button" href="#journey-architect">
+            Explore Escapes
+          </a>
+          <button id="hero-explore-details-btn"
+            class="btn-rounded inline-block ocean-glass hover:border-brand-cyan text-white text-xs tracking-wider uppercase px-8 py-3.5 transition-all duration-300 cursor-pointer">
+            View Route Details
+          </button>
+        </div>
+      </div>
+    </main>
+    <!-- END: HeroMainContent -->
+
+    <!-- BEGIN: BottomTimelineNavigation -->
+    <footer class="w-full px-6 sm:px-12 lg:px-20 pb-8 pt-4 z-30" data-purpose="timeline-carousel-navigation">
+      <div class="max-w-7xl mx-auto">
+        <nav aria-label="Destination Slider" id="timeline-navigation"
+          class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 items-center">
+          <!-- Waypoint 01: Kashmir (Active Default) -->
+          <button type="button" data-dest-index="0" aria-current="step"
+            class="timeline-waypoint group flex flex-col justify-end text-left focus:outline-none cursor-pointer">
+            <div class="flex items-center space-x-3 mb-2">
+              <span class="waypoint-num text-xs sm:text-sm font-semibold tracking-wider text-brand-cyan">01</span>
+              <div class="h-[1.5px] flex-1 bg-white/25 rounded-full overflow-hidden">
+                <div class="waypoint-bar h-full bg-brand-cyan w-full transition-all duration-500"></div>
+              </div>
+            </div>
+            <div
+              class="waypoint-label text-[11px] sm:text-xs font-medium tracking-widest text-white uppercase group-hover:text-brand-cyan transition-colors">
+              Kashmir
+            </div>
+          </button>
+
+          <!-- Waypoint 02: Kerala -->
+          <button type="button" data-dest-index="1"
+            class="timeline-waypoint group flex flex-col justify-end text-left focus:outline-none cursor-pointer">
+            <div class="flex items-center space-x-3 mb-2">
+              <span
+                class="waypoint-num text-xs sm:text-sm font-medium tracking-wider text-white/50 group-hover:text-white transition-colors">02</span>
+              <div
+                class="h-[1.5px] flex-1 bg-white/20 rounded-full group-hover:bg-white/40 transition-colors overflow-hidden">
+                <div class="waypoint-bar h-full bg-brand-cyan w-0 transition-all duration-500"></div>
+              </div>
+            </div>
+            <div
+              class="waypoint-label text-[11px] sm:text-xs font-light tracking-widest text-white/60 uppercase group-hover:text-white transition-colors">
+              Kerala
+            </div>
+          </button>
+
+          <!-- Waypoint 03: Rajasthan -->
+          <button type="button" data-dest-index="2"
+            class="timeline-waypoint group flex flex-col justify-end text-left focus:outline-none cursor-pointer">
+            <div class="flex items-center space-x-3 mb-2">
+              <span
+                class="waypoint-num text-xs sm:text-sm font-medium tracking-wider text-white/50 group-hover:text-white transition-colors">03</span>
+              <div
+                class="h-[1.5px] flex-1 bg-white/20 rounded-full group-hover:bg-white/40 transition-colors overflow-hidden">
+                <div class="waypoint-bar h-full bg-brand-cyan w-0 transition-all duration-500"></div>
+              </div>
+            </div>
+            <div
+              class="waypoint-label text-[11px] sm:text-xs font-light tracking-widest text-white/60 uppercase group-hover:text-white transition-colors">
+              Rajasthan
+            </div>
+          </button>
+
+          <!-- Waypoint 04: Andaman -->
+          <button type="button" data-dest-index="3"
+            class="timeline-waypoint group flex flex-col justify-end text-left focus:outline-none cursor-pointer">
+            <div class="flex items-center space-x-3 mb-2">
+              <span
+                class="waypoint-num text-xs sm:text-sm font-medium tracking-wider text-white/50 group-hover:text-white transition-colors">04</span>
+              <div
+                class="h-[1.5px] flex-1 bg-white/20 rounded-full group-hover:bg-white/40 transition-colors overflow-hidden">
+                <div class="waypoint-bar h-full bg-brand-cyan w-0 transition-all duration-500"></div>
+              </div>
+            </div>
+            <div
+              class="waypoint-label text-[11px] sm:text-xs font-light tracking-widest text-white/60 uppercase group-hover:text-white transition-colors">
+              Andaman & Nicobar
+            </div>
+          </button>
+        </nav>
+
+        <!-- Center Downward Indicator Chevrons -->
+        <div class="w-full flex justify-center items-center mt-5 mb-1" data-purpose="scroll-down-cue">
+          <a aria-label="Scroll to discover next destination details"
+            class="flex flex-col items-center text-white/60 hover:text-white transition-colors animate-subtle-bounce p-2"
+            href="#journey-architect">
+            <svg class="w-4 h-4 stroke-[1.5] -mb-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            <svg class="w-4 h-4 stroke-[1.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!-- END: BottomTimelineNavigation -->
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 1. FLOATING QUICK-BOOKING / JOURNEY ARCHITECT (ROUNDED CONTROLS) -->
+  <!-- ========================================== -->
+  <section class="relative z-40 px-6 sm:px-12 lg:px-20 -mt-10 lg:-mt-14" id="journey-architect">
+    <div
+      class="max-w-7xl mx-auto ocean-glass rounded-2xl p-6 lg:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.6)] border border-brand-cyan/20">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b border-white/10 mb-6">
+        <div>
+          <span class="text-[10px] tracking-mega uppercase font-medium text-brand-cyan">BESPOKE INDIAN
+            EXPEDITIONS</span>
+          <h3 class="text-xl sm:text-2xl font-light tracking-wide text-white uppercase mt-1">Design Your Journey</h3>
+        </div>
+        <p class="text-xs text-white/60 font-light max-w-md">Private chartered flights, palatial sanctuaries, and
+          tailored itineraries curated by seasoned regional directors.</p>
+      </div>
+
+      <form id="journey-architect-form" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-center">
+        <!-- Destination Dropdown (Indian destinations) -->
+        <div class="flex flex-col">
+          <label for="booking-destination-select"
+            class="text-[10px] uppercase tracking-widest text-white/50 mb-1.5 font-medium">Destination</label>
+          <div class="relative">
+            <select id="booking-destination-select"
+              class="w-full bg-[#041013]/80 border border-white/15 text-white text-xs py-3 px-4 focus:border-brand-cyan focus:ring-0 uppercase tracking-wider rounded-xl cursor-pointer">
+              <option value="Kashmir (Dal Lake & Gulmarg)">Kashmir (Dal Lake & Gulmarg)</option>
+              <option value="Kerala (Munnar & Alleppey)">Kerala (Munnar & Alleppey)</option>
+              <option value="Rajasthan (Udaipur & Jaisalmer)">Rajasthan (Udaipur & Jaisalmer)</option>
+              <option value="Himachal (Manali & Spiti Valley)">Himachal (Manali & Spiti Valley)</option>
+              <option value="Andaman (Havelock Coral Sanctuary)">Andaman (Havelock Coral Sanctuary)</option>
+              <option value="Uttarakhand (Rishikesh & Nainital)">Uttarakhand (Rishikesh & Nainital)</option>
+              <option value="Meghalaya (Dawki & Cherrapunji)">Meghalaya (Dawki & Cherrapunji)</option>
+              <option value="Maharashtra (Lonavala & Konkan)">Maharashtra (Lonavala & Konkan)</option>
+              <option value="Goa (Coastal Beach Sanctuaries)">Goa (Coastal Beach Sanctuaries)</option>
+              <option value="Sikkim (Gangtok & Kanchenjunga)">Sikkim (Gangtok & Kanchenjunga)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Dates / Season -->
+        <div class="flex flex-col">
+          <label for="booking-dates-input"
+            class="text-[10px] uppercase tracking-widest text-white/50 mb-1.5 font-medium">Travel Window</label>
+          <div class="relative">
+            <input id="booking-dates-input"
+              class="w-full bg-[#041013]/80 border border-white/15 text-white text-xs py-3 px-4 focus:border-brand-cyan focus:ring-0 uppercase tracking-wider rounded-xl"
+              placeholder="Nov 2025 - Mar 2026" type="text" value="Nov 2025 - Mar 2026" />
+          </div>
+        </div>
+
+        <!-- Party Size -->
+        <div class="flex flex-col">
+          <label for="booking-travelers-select"
+            class="text-[10px] uppercase tracking-widest text-white/50 mb-1.5 font-medium">Travelers</label>
+          <select id="booking-travelers-select"
+            class="w-full bg-[#041013]/80 border border-white/15 text-white text-xs py-3 px-4 focus:border-brand-cyan focus:ring-0 uppercase tracking-wider rounded-xl cursor-pointer">
+            <option value="2 Guests (Private Villa / Suite)">2 Guests (Private Villa / Suite)</option>
+            <option value="Solo Voyager">Solo Voyager</option>
+            <option value="Family (3 - 6 Guests)">Family (3 - 6 Guests)</option>
+            <option value="Private Delegation (7+)">Private Delegation (7+)</option>
+          </select>
+        </div>
+
+        <!-- Travel Preference -->
+        <div class="flex flex-col">
+          <label for="booking-style-select"
+            class="text-[10px] uppercase tracking-widest text-white/50 mb-1.5 font-medium">Atmosphere / Style</label>
+          <select id="booking-style-select"
+            class="w-full bg-[#041013]/80 border border-white/15 text-white text-xs py-3 px-4 focus:border-brand-cyan focus:ring-0 uppercase tracking-wider rounded-xl cursor-pointer">
+            <option value="Himalayan Alpine Sanctuary">Himalayan Alpine Sanctuary</option>
+            <option value="Palatial Heritage & Stargazing">Palatial Heritage & Stargazing</option>
+            <option value="Backwater Houseboat & Ayurveda">Backwater Houseboat & Ayurveda</option>
+            <option value="Pristine Coral Island Seclusion">Pristine Coral Island Seclusion</option>
+          </select>
+        </div>
+
+        <!-- Submit Button (Rounded) -->
+        <div class="flex flex-col justify-end pt-2 sm:pt-0">
+          <button id="booking-check-avail-btn"
+            class="btn-rounded w-full bg-[#2ee6c8] hover:bg-[#25c7ad] text-[#072428] font-semibold text-xs tracking-wider uppercase py-3.5 px-6 transition-all duration-300 transform hover:shadow-[0_8px_20px_rgba(46,230,200,0.3)] active:translate-y-0 text-center flex items-center justify-center gap-2 cursor-pointer"
+            type="submit">
+            <span>Check Availability</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 2. CURATED DESTINATIONS SHOWCASE (INDIAN ESCAPES) -->
+  <!-- ========================================== -->
+  <section class="py-28 px-6 sm:px-12 lg:px-20 relative" id="destinations">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+        <div>
+          <span class="text-[10px] font-semibold tracking-mega text-brand-cyan uppercase">PORTFOLIO OF WONDERS</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-light tracking-wider text-white uppercase mt-2">Curated
+            Escapes</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-white/60 font-light max-w-md mt-4 md:mt-0 leading-relaxed">
+          Four cornerstones of unhurried Indian elegance, selected for exceptional natural privacy, royal heritage, and
+          singular geography.
+        </p>
+      </div>
+
+      <!-- Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card 1: Kashmir -->
+        <div
+          class="group ocean-glass-card rounded-2xl overflow-hidden transition-all duration-500 hover:border-brand-cyan/40 hover:-translate-y-1.5 flex flex-col justify-between"
+          id="kashmir">
+          <div class="relative h-72 overflow-hidden">
+            <img alt="Dal Lake Kashmir"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 filter brightness-95"
+              src="/images/dest-kashmir.jpg" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#041013] via-transparent to-black/20"></div>
+            <span
+              class="absolute top-4 left-4 bg-[#041013]/85 text-brand-cyan text-[10px] font-semibold tracking-widest px-3 py-1 rounded-full border border-brand-cyan/30 uppercase">
+              01 • Northern Himalayas
+            </span>
+            <span class="absolute bottom-3 right-4 text-[11px] tracking-widest text-white/90 font-light">
+              Best: Apr – Oct
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3
+                class="text-xl font-medium tracking-wide text-white uppercase group-hover:text-brand-cyan transition-colors">
+                Kashmir</h3>
+              <p class="text-xs text-brand-cyan/80 uppercase tracking-widest mt-1">Dal Lake & Gulmarg Sanctuary</p>
+              <p class="text-xs text-white/60 font-light mt-3 leading-relaxed">
+                Handcrafted cedar royal houseboats, Apharwat heli-skiing, and saffron Mughal pleasure gardens.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-white/10 flex items-center justify-between">
+              <div>
+                <span class="text-[9px] uppercase tracking-widest text-white/40 block">From</span>
+                <span class="text-sm font-semibold tracking-wider text-white" data-base-price="520">₹46,800 <span
+                    class="text-[10px] font-normal text-white/50">/ night</span></span>
+              </div>
+              <button
+                class="btn-rounded discover-dest-btn text-xs text-brand-cyan uppercase tracking-widest font-semibold flex items-center gap-1 group-hover:translate-x-1 transition-transform cursor-pointer px-4 py-1.5 border border-brand-cyan/30 hover:border-brand-cyan hover:bg-brand-cyan/10"
+                data-dest-id="kashmir">
+                Discover <span class="text-sm">→</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Kerala -->
+        <div
+          class="group ocean-glass-card rounded-2xl overflow-hidden transition-all duration-500 hover:border-brand-cyan/40 hover:-translate-y-1.5 flex flex-col justify-between"
+          id="kerala">
+          <div class="relative h-72 overflow-hidden">
+            <img alt="Munnar Tea Hills Kerala"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 filter brightness-95"
+              src="/images/dest-kerala.jpg" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#041013] via-transparent to-black/20"></div>
+            <span
+              class="absolute top-4 left-4 bg-[#041013]/85 text-brand-cyan text-[10px] font-semibold tracking-widest px-3 py-1 rounded-full border border-brand-cyan/30 uppercase">
+              02 • Malabar Coast
+            </span>
+            <span class="absolute bottom-3 right-4 text-[11px] tracking-widest text-white/90 font-light">
+              Best: Sep – Mar
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3
+                class="text-xl font-medium tracking-wide text-white uppercase group-hover:text-brand-cyan transition-colors">
+                Kerala</h3>
+              <p class="text-xs text-brand-cyan/80 uppercase tracking-widest mt-1">Backwaters & Munnar Hills</p>
+              <p class="text-xs text-white/60 font-light mt-3 leading-relaxed">
+                Solar Kettuvallams gliding through silent palm lagoons and high-altitude colonial tea planter bungalows.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-white/10 flex items-center justify-between">
+              <div>
+                <span class="text-[9px] uppercase tracking-widest text-white/40 block">From</span>
+                <span class="text-sm font-semibold tracking-wider text-white" data-base-price="440">₹39,600 <span
+                    class="text-[10px] font-normal text-white/50">/ night</span></span>
+              </div>
+              <button
+                class="btn-rounded discover-dest-btn text-xs text-brand-cyan uppercase tracking-widest font-semibold flex items-center gap-1 group-hover:translate-x-1 transition-transform cursor-pointer px-4 py-1.5 border border-brand-cyan/30 hover:border-brand-cyan hover:bg-brand-cyan/10"
+                data-dest-id="kerala">
+                Discover <span class="text-sm">→</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Rajasthan -->
+        <div
+          class="group ocean-glass-card rounded-2xl overflow-hidden transition-all duration-500 hover:border-brand-cyan/40 hover:-translate-y-1.5 flex flex-col justify-between"
+          id="rajasthan">
+          <div class="relative h-72 overflow-hidden">
+            <img alt="Udaipur Lake Palace Rajasthan"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 filter brightness-95"
+              src="/images/dest-rajasthan.jpg" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#041013] via-transparent to-black/20"></div>
+            <span
+              class="absolute top-4 left-4 bg-[#041013]/85 text-brand-cyan text-[10px] font-semibold tracking-widest px-3 py-1 rounded-full border border-brand-cyan/30 uppercase">
+              03 • Thar & Mewar
+            </span>
+            <span class="absolute bottom-3 right-4 text-[11px] tracking-widest text-white/90 font-light">
+              Best: Oct – Mar
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3
+                class="text-xl font-medium tracking-wide text-white uppercase group-hover:text-brand-cyan transition-colors">
+                Rajasthan</h3>
+              <p class="text-xs text-brand-cyan/80 uppercase tracking-widest mt-1">Udaipur & Golden Thar Sands</p>
+              <p class="text-xs text-white/60 font-light mt-3 leading-relaxed">
+                Floating marble palaces on Lake Pichola, private Thar dune glamping, and royal polo estancias.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-white/10 flex items-center justify-between">
+              <div>
+                <span class="text-[9px] uppercase tracking-widest text-white/40 block">From</span>
+                <span class="text-sm font-semibold tracking-wider text-white" data-base-price="600">₹54,000 <span
+                    class="text-[10px] font-normal text-white/50">/ night</span></span>
+              </div>
+              <button
+                class="btn-rounded discover-dest-btn text-xs text-brand-cyan uppercase tracking-widest font-semibold flex items-center gap-1 group-hover:translate-x-1 transition-transform cursor-pointer px-4 py-1.5 border border-brand-cyan/30 hover:border-brand-cyan hover:bg-brand-cyan/10"
+                data-dest-id="rajasthan">
+                Discover <span class="text-sm">→</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Andaman -->
+        <div
+          class="group ocean-glass-card rounded-2xl overflow-hidden transition-all duration-500 hover:border-brand-cyan/40 hover:-translate-y-1.5 flex flex-col justify-between"
+          id="andaman">
+          <div class="relative h-72 overflow-hidden">
+            <img alt="Havelock Radhanagar Andaman"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 filter brightness-95"
+              src="/images/dest-andaman.jpg" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#041013] via-transparent to-black/20"></div>
+            <span
+              class="absolute top-4 left-4 bg-[#041013]/85 text-brand-cyan text-[10px] font-semibold tracking-widest px-3 py-1 rounded-full border border-brand-cyan/30 uppercase">
+              04 • Bay of Bengal
+            </span>
+            <span class="absolute bottom-3 right-4 text-[11px] tracking-widest text-white/90 font-light">
+              Best: Oct – May
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3
+                class="text-xl font-medium tracking-wide text-white uppercase group-hover:text-brand-cyan transition-colors">
+                Andaman</h3>
+              <p class="text-xs text-brand-cyan/80 uppercase tracking-widest mt-1">Havelock & Radhanagar Atolls</p>
+              <p class="text-xs text-white/60 font-light mt-3 leading-relaxed">
+                Pristine powder sands at Radhanagar, private superyacht charters, and bioluminescent night lagoons.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-white/10 flex items-center justify-between">
+              <div>
+                <span class="text-[9px] uppercase tracking-widest text-white/40 block">From</span>
+                <span class="text-sm font-semibold tracking-wider text-white" data-base-price="550">₹49,500 <span
+                    class="text-[10px] font-normal text-white/50">/ night</span></span>
+              </div>
+              <button
+                class="btn-rounded discover-dest-btn text-xs text-brand-cyan uppercase tracking-widest font-semibold flex items-center gap-1 group-hover:translate-x-1 transition-transform cursor-pointer px-4 py-1.5 border border-brand-cyan/30 hover:border-brand-cyan hover:bg-brand-cyan/10"
+                data-dest-id="andaman">
+                Discover <span class="text-sm">→</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 3. SIGNATURE JOURNEYS & PACKAGES (ROUNDED CORNERS) -->
+  <!-- ========================================== -->
+  <section class="py-24 px-6 sm:px-12 lg:px-20 bg-[#07181c] relative" id="journeys">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-[10px] font-semibold tracking-mega text-brand-cyan uppercase">HANDCRAFTED ITINERARIES</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-light tracking-wider text-white uppercase mt-2">Signature
+          Journeys</h2>
+        <p class="text-xs sm:text-sm text-white/65 font-light mt-4 leading-relaxed">
+          Seamlessly orchestrated private expeditions with dedicated aviation transfers, royal palace residencies, and
+          master naturalist escorts.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Package 1: The Royal Rajputana Grandeur (Rounded) -->
+        <div
+          class="signature-journey-card ocean-glass p-8 sm:p-10 border border-white/10 hover:border-brand-cyan/50 transition-all duration-300 flex flex-col justify-between rounded-2xl overflow-hidden">
+          <div>
+            <div
+              class="flex items-center justify-between text-xs text-white/60 pb-4 border-b border-white/10 mb-6 flex-wrap gap-2">
+              <span class="text-brand-cyan font-medium tracking-widest uppercase">Rajasthan • Udaipur • Jodhpur •
+                Jaisalmer</span>
+              <span class="tracking-widest uppercase">12 Days / 11 Nights</span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-light tracking-wide text-white uppercase mb-3">The Royal Rajputana
+              Grandeur</h3>
+            <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed mb-6">
+              Experience the regal splendor of India's grandest dynasties. From floating marble palaces in Udaipur to
+              private helicopter links into golden Thar desert dunes and private royal polo matches.
+            </p>
+            <div class="grid grid-cols-2 gap-4 text-xs font-light text-white/80 py-4 border-y border-white/5 mb-6">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-brand-cyan"></span>
+                <span>Private Charter Aviation</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-brand-cyan"></span>
+                <span>Lake Pichola Island Suite</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-brand-cyan"></span>
+                <span>After-Hours Private Fort Entry</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-brand-cyan"></span>
+                <span>Dedicated Royal Khansama</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 rounded-xl">
+            <div>
+              <span class="text-[9px] uppercase tracking-widest text-white/40 block">All-Inclusive Royal
+                Expedition</span>
+              <span class="text-lg font-semibold tracking-wider text-white" data-base-price="8500">₹7,65,000 <span
+                  class="text-xs font-normal text-white/60">/ couple</span></span>
+            </div>
+            <button
+              class="btn-rounded request-journey-btn bg-[#2ee6c8] hover:bg-[#25c7ad] text-[#072428] font-semibold text-xs tracking-wider uppercase px-8 py-3.5 text-center transition-all duration-300 cursor-pointer"
+              data-journey-id="royal-rajputana-grandeur">
+              Request Itinerary
+            </button>
+          </div>
+        </div>
+
+        <!-- Package 2: The Himalayan & Valley of Gods Sanctuary (Rounded) -->
+        <div
+          class="signature-journey-card ocean-glass p-8 sm:p-10 border border-white/10 hover:border-brand-cyan/50 transition-all duration-300 flex flex-col justify-between rounded-2xl overflow-hidden">
+          <div>
+            <div
+              class="flex items-center justify-between text-xs text-white/60 pb-4 border-b border-white/10 mb-6 flex-wrap gap-2">
+              <span class="text-brand-cyan font-medium tracking-widest uppercase">Kashmir & Himachal • Gulmarg • Manali
+                • Spiti</span>
+              <span class="tracking-widest uppercase">10 Days / 9 Nights</span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-light tracking-wide text-white uppercase mb-3">Himalayan & Valley of
+              Gods</h3>
+            <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed mb-6">
+              Ascend into the divine roof of India. Drift on private Dal Lake cedar houseboats before taking private
+              helicopter shuttles across Rohtang and the high-altitude moonscapes of Spiti Valley.
+            </p>
+            <div class="grid grid-cols-2 gap-4 text-xs font-light text-white/80 py-4 border-y border-white/5 mb-6">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-brand-cyan"></span>
+                <span>Helicopter Over High Passes</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-brand-cyan"></span>
+                <span>Cedar Presidential Houseboat</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-brand-cyan"></span>
+                <span>Monastery High Lama Blessings</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-brand-cyan"></span>
+                <span>Oxygen-Calibrated Chalets</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 rounded-xl">
+            <div>
+              <span class="text-[9px] uppercase tracking-widest text-white/40 block">All-Inclusive Mountain
+                Expedition</span>
+              <span class="text-lg font-semibold tracking-wider text-white" data-base-price="7800">₹7,02,000 <span
+                  class="text-xs font-normal text-white/60">/ couple</span></span>
+            </div>
+            <button
+              class="btn-rounded request-journey-btn bg-[#2ee6c8] hover:bg-[#25c7ad] text-[#072428] font-semibold text-xs tracking-wider uppercase px-8 py-3.5 text-center transition-all duration-300 cursor-pointer"
+              data-journey-id="himalayan-valley-of-gods">
+              Request Itinerary
+            </button>
+          </div>
+        </div>
+
+        <!-- Package 3: The Malabar & Backwater Haven (Rounded) -->
+        <div
+          class="signature-journey-card ocean-glass p-8 sm:p-10 border border-white/10 hover:border-brand-cyan/50 transition-all duration-300 flex flex-col justify-between rounded-2xl overflow-hidden">
+          <div>
+            <div
+              class="flex items-center justify-between text-xs text-white/60 pb-4 border-b border-white/10 mb-6 flex-wrap gap-2">
+              <span class="text-brand-cyan font-medium tracking-widest uppercase">Kerala • Alleppey • Munnar •
+                Wayanad</span>
+              <span class="tracking-widest uppercase">8 Days / 7 Nights</span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-light tracking-wide text-white uppercase mb-3">The Malabar & Backwater
+              Haven</h3>
+            <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed mb-6">
+              Immerse yourself in lush tropical serenity. Cruise private palm-fringed lagoons aboard a dedicated
+              presidential Kettuvallam, accompanied by Ayurvedic wellness doctors and colonial tea estate residencies.
+            </p>
+            <div class="grid grid-cols-2 gap-4 text-xs font-light text-white/80 py-4 border-y border-white/5 mb-6">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-brand-cyan"></span>
+                <span>Dedicated Kettuvallam Houseboat</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-brand-cyan"></span>
+                <span>Munnar Tea Estate Bungalow</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-brand-cyan"></span>
+                <span>Daily Tailored Ayurvedic Spas</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-brand-cyan"></span>
+                <span>Private Naturalist & Chef</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 rounded-xl">
+            <div>
+              <span class="text-[9px] uppercase tracking-widest text-white/40 block">All-Inclusive Wellness
+                Expedition</span>
+              <span class="text-lg font-semibold tracking-wider text-white" data-base-price="6200">₹5,58,000 <span
+                  class="text-xs font-normal text-white/60">/ couple</span></span>
+            </div>
+            <button
+              class="btn-rounded request-journey-btn bg-[#2ee6c8] hover:bg-[#25c7ad] text-[#072428] font-semibold text-xs tracking-wider uppercase px-8 py-3.5 text-center transition-all duration-300 cursor-pointer"
+              data-journey-id="malabar-backwater-haven">
+              Request Itinerary
+            </button>
+          </div>
+        </div>
+
+        <!-- Package 4: The Emerald Andaman & Nicobar Expedition (Rounded) -->
+        <div
+          class="signature-journey-card ocean-glass p-8 sm:p-10 border border-white/10 hover:border-brand-cyan/50 transition-all duration-300 flex flex-col justify-between rounded-2xl overflow-hidden">
+          <div>
+            <div
+              class="flex items-center justify-between text-xs text-white/60 pb-4 border-b border-white/10 mb-6 flex-wrap gap-2">
+              <span class="text-brand-cyan font-medium tracking-widest uppercase">Andaman • Havelock • Neil • Barren
+                Island</span>
+              <span class="tracking-widest uppercase">10 Days / 9 Nights</span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-light tracking-wide text-white uppercase mb-3">Emerald Andaman
+              Expedition</h3>
+            <p class="text-xs sm:text-sm text-white/70 font-light leading-relaxed mb-6">
+              Sail through crystal turquoise waters aboard a chartered luxury catamaran. Snorkel pristine barrier reefs,
+              witness bioluminescent night waters, and retreat to private coastal pavilions on Radhanagar Beach.
+            </p>
+            <div class="grid grid-cols-2 gap-4 text-xs font-light text-white/80 py-4 border-y border-white/5 mb-6">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-brand-cyan"></span>
+                <span>Private Yacht Charter</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-brand-cyan"></span>
+                <span>Direct Seaplane Island Links</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-brand-cyan"></span>
+                <span>Deep Reef Marine Biologist</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-brand-cyan"></span>
+                <span>Private Sandbank Starlit Dinners</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4 rounded-xl">
+            <div>
+              <span class="text-[9px] uppercase tracking-widest text-white/40 block">All-Inclusive Marine
+                Expedition</span>
+              <span class="text-lg font-semibold tracking-wider text-white" data-base-price="8900">₹8,01,000 <span
+                  class="text-xs font-normal text-white/60">/ couple</span></span>
+            </div>
+            <button
+              class="btn-rounded request-journey-btn bg-[#2ee6c8] hover:bg-[#25c7ad] text-[#072428] font-semibold text-xs tracking-wider uppercase px-8 py-3.5 text-center transition-all duration-300 cursor-pointer"
+              data-journey-id="emerald-andaman-expedition">
+              Request Itinerary
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 4. CURATED TRAVEL FORMATS / EXPERIENCES (INDIAN ATMOSPHERES) -->
+  <!-- ========================================== -->
+  <section class="py-24 px-6 sm:px-12 lg:px-20 relative bg-[#041013]" id="formats">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+        <div>
+          <span class="text-[10px] font-semibold tracking-mega text-brand-cyan uppercase">CURATED PERSPECTIVES</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-light tracking-wider text-white uppercase mt-2">Bespoke
+            Travel Formats</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-white/60 font-light max-w-md mt-4 md:mt-0 leading-relaxed">
+          Whether reserving royal desert citadels or navigating silent Himalayan passes by private helicopter, we shape
+          Indian travel around your exact rhythm.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Format 1: Royal Heritage -->
+        <div
+          class="group relative overflow-hidden h-96 rounded-2xl border border-white/10 flex flex-col justify-end p-6 cursor-pointer format-card transition-all duration-300 hover:border-brand-cyan/50"
+          data-format="heritage">
+          <img alt="Rajasthan Royal Heritage Palace"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 filter brightness-75 group-hover:brightness-90"
+            src="/images/format-heritage.jpg" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#041013] via-[#041013]/40 to-transparent"></div>
+          <div class="relative z-10">
+            <span class="text-brand-cyan text-[10px] font-semibold tracking-widest uppercase">Atmosphere 01</span>
+            <h4 class="text-xl font-medium tracking-wide uppercase text-white mt-1 mb-2">Royal Palace Heritage</h4>
+            <p class="text-xs text-white/70 font-light leading-relaxed mb-4">
+              Private heritage wings, courtyards glowing with hand-cut lanterns, and private tours with royal
+              custodians.
+            </p>
+            <span
+              class="btn-rounded text-xs font-semibold text-brand-cyan tracking-wider uppercase inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              Inquire Format →
+            </span>
+          </div>
+        </div>
+
+        <!-- Format 2: Houseboats -->
+        <div
+          class="group relative overflow-hidden h-96 rounded-2xl border border-white/10 flex flex-col justify-end p-6 cursor-pointer format-card transition-all duration-300 hover:border-brand-cyan/50"
+          data-format="houseboat">
+          <img alt="Kerala Backwater Houseboat"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 filter brightness-75 group-hover:brightness-90"
+            src="/images/format-houseboat.jpg" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#041013] via-[#041013]/40 to-transparent"></div>
+          <div class="relative z-10">
+            <span class="text-brand-cyan text-[10px] font-semibold tracking-widest uppercase">Atmosphere 02</span>
+            <h4 class="text-xl font-medium tracking-wide uppercase text-white mt-1 mb-2">Backwater Houseboats</h4>
+            <p class="text-xs text-white/70 font-light leading-relaxed mb-4">
+              Total solitude on Vembanad Lake aboard teakwood houseboats with air-conditioned salons and personal chefs.
+            </p>
+            <span
+              class="btn-rounded text-xs font-semibold text-brand-cyan tracking-wider uppercase inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              Inquire Format →
+            </span>
+          </div>
+        </div>
+
+        <!-- Format 3: Himalayas -->
+        <div
+          class="group relative overflow-hidden h-96 rounded-2xl border border-white/10 flex flex-col justify-end p-6 cursor-pointer format-card transition-all duration-300 hover:border-brand-cyan/50"
+          data-format="himalayas">
+          <img alt="High-Altitude Himalayan Treks"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 filter brightness-75 group-hover:brightness-90"
+            src="/images/format-himalayas.jpg" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#041013] via-[#041013]/40 to-transparent"></div>
+          <div class="relative z-10">
+            <span class="text-brand-cyan text-[10px] font-semibold tracking-widest uppercase">Atmosphere 03</span>
+            <h4 class="text-xl font-medium tracking-wide uppercase text-white mt-1 mb-2">Himalayan Expeditions</h4>
+            <p class="text-xs text-white/70 font-light leading-relaxed mb-4">
+              Snow-capped peaks, ancient gompas, heated alpine glamping domes, and private helicopter pass hops.
+            </p>
+            <span
+              class="btn-rounded text-xs font-semibold text-brand-cyan tracking-wider uppercase inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              Inquire Format →
+            </span>
+          </div>
+        </div>
+
+        <!-- Format 4: Coastal Villas -->
+        <div
+          class="group relative overflow-hidden h-96 rounded-2xl border border-white/10 flex flex-col justify-end p-6 cursor-pointer format-card transition-all duration-300 hover:border-brand-cyan/50"
+          data-format="coastal">
+          <img alt="Private Coastal Island Villas"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 filter brightness-75 group-hover:brightness-90"
+            src="/images/format-coastal.jpg" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#041013] via-[#041013]/40 to-transparent"></div>
+          <div class="relative z-10">
+            <span class="text-brand-cyan text-[10px] font-semibold tracking-widest uppercase">Atmosphere 04</span>
+            <h4 class="text-xl font-medium tracking-wide uppercase text-white mt-1 mb-2">Coastal Island Villas</h4>
+            <p class="text-xs text-white/70 font-light leading-relaxed mb-4">
+              Secluded beachfront estates along the Andaman Sea, South Goa, and Konkan coasts with private plunge pools.
+            </p>
+            <span
+              class="btn-rounded text-xs font-semibold text-brand-cyan tracking-wider uppercase inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              Inquire Format →
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 5. TRUST & WHITE-GLOVE SERVICE PILLARS -->
+  <!-- ========================================== -->
+  <section class="py-24 px-6 sm:px-12 lg:px-20 bg-[#07181c] border-y border-white/10" id="standards">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-[10px] font-semibold tracking-mega text-brand-cyan uppercase">THE YOUR BRAND NAME BENCHMARK</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-light tracking-wider text-white uppercase mt-2">White-Glove
+          Discretion</h2>
+        <p class="text-xs sm:text-sm text-white/60 font-light mt-4 leading-relaxed">
+          We serve high-profile voyagers who expect flawlessness, seamless privacy, and immediate responsiveness across
+          the subcontinent.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div
+          class="ocean-glass p-8 rounded-2xl border border-white/5 transition-all duration-300 hover:border-brand-cyan/40">
+          <div
+            class="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan mb-6">
+            <svg class="w-6 h-6 stroke-[1.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+              <path
+                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <h4 class="text-base font-semibold tracking-wide text-white uppercase mb-2">Unrivaled Access</h4>
+          <p class="text-xs text-white/60 font-light leading-relaxed">
+            Access royal private palace wings, secluded tea estates, and wildlife reserves unavailable on commercial
+            platforms.
+          </p>
+        </div>
+
+        <div
+          class="ocean-glass p-8 rounded-2xl border border-white/5 transition-all duration-300 hover:border-brand-cyan/40">
+          <div
+            class="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan mb-6">
+            <svg class="w-6 h-6 stroke-[1.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+              <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round">
+              </path>
+            </svg>
+          </div>
+          <h4 class="text-base font-semibold tracking-wide text-white uppercase mb-2">24/7 Dedicated Concierge</h4>
+          <p class="text-xs text-white/60 font-light leading-relaxed">
+            A single point of contact based in New Delhi and Mumbai overseeing every transit leg and on-ground VIP
+            detail.
+          </p>
+        </div>
+
+        <div
+          class="ocean-glass p-8 rounded-2xl border border-white/5 transition-all duration-300 hover:border-brand-cyan/40">
+          <div
+            class="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan mb-6">
+            <svg class="w-6 h-6 stroke-[1.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+              <path
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <h4 class="text-base font-semibold tracking-wide text-white uppercase mb-2">Tailored Discretion</h4>
+          <p class="text-xs text-white/60 font-light leading-relaxed">
+            Strict confidentiality protocols, private airport tarmac customs clearances, and secure anonymous bookings.
+          </p>
+        </div>
+
+        <div
+          class="ocean-glass p-8 rounded-2xl border border-white/5 transition-all duration-300 hover:border-brand-cyan/40">
+          <div
+            class="w-12 h-12 rounded-xl flex items-center justify-center bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan mb-6">
+            <svg class="w-6 h-6 stroke-[1.5]" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <h4 class="text-base font-semibold tracking-wide text-white uppercase mb-2">Zero-Friction Logistics</h4>
+          <p class="text-xs text-white/60 font-light leading-relaxed">
+            Real-time weather tracking, immediate aviation repositioning, and backup luxury transit contingency plans.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 6. TRAVELER TESTIMONIALS & DISPATCHES (INDIAN EXPEDITIONS) -->
+  <!-- ========================================== -->
+  <section class="py-24 px-6 sm:px-12 lg:px-20 relative bg-[#041013]" id="journal">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+        <div>
+          <span class="text-[10px] font-semibold tracking-mega text-brand-cyan uppercase">EXPEDITION VOICES</span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-light tracking-wider text-white uppercase mt-2">Traveler
+            Dispatches</h2>
+        </div>
+        <p class="text-xs sm:text-sm text-white/60 font-light max-w-md mt-4 md:mt-0 leading-relaxed">
+          Excerpts from private debriefs recorded with our Indian voyage designers.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div
+          class="ocean-glass p-8 rounded-2xl flex flex-col justify-between border border-white/10 hover:border-brand-cyan/30 transition-all">
+          <div>
+            <div class="flex items-center text-brand-cyan mb-4 text-sm tracking-widest">
+              ★★★★★
+            </div>
+            <p class="font-serif text-lg md:text-xl text-white/90 italic font-light leading-relaxed mb-6">
+              "Our bespoke Kashmir expedition with YOUR BRAND NAME was transcendent. Taking a private helicopter to
+              Gulmarg's pristine slopes, followed by evenings on Dal Lake with hot kehwa prepared by our personal wazwan
+              chef, was sheer perfection."
+            </p>
+          </div>
+          <div class="border-t border-white/10 pt-4">
+            <p class="text-xs font-semibold uppercase tracking-wider text-white">Maharaja Y. Gaekwad & Family</p>
+            <p class="text-[11px] text-white/50 uppercase tracking-widest mt-0.5">Kashmir Valley & Gulmarg • October
+              2025</p>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div
+          class="ocean-glass p-8 rounded-2xl flex flex-col justify-between border border-white/10 hover:border-brand-cyan/30 transition-all">
+          <div>
+            <div class="flex items-center text-brand-cyan mb-4 text-sm tracking-widest">
+              ★★★★★
+            </div>
+            <p class="font-serif text-lg md:text-xl text-white/90 italic font-light leading-relaxed mb-6">
+              "The private solar Kettuvallam cruising through the untouched Alleppey backwaters felt like a dream. The
+              silence, the culinary excellence, and the flawless Ayurvedic treatments made this our finest journey in
+              India."
+            </p>
+          </div>
+          <div class="border-t border-white/10 pt-4">
+            <p class="text-xs font-semibold uppercase tracking-wider text-white">Aisha & Vikram Singhania</p>
+            <p class="text-[11px] text-white/50 uppercase tracking-widest mt-0.5">Kerala Backwater Haven • December 2025
+            </p>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div
+          class="ocean-glass p-8 rounded-2xl flex flex-col justify-between border border-white/10 hover:border-brand-cyan/30 transition-all">
+          <div>
+            <div class="flex items-center text-brand-cyan mb-4 text-sm tracking-widest">
+              ★★★★★
+            </div>
+            <p class="font-serif text-lg md:text-xl text-white/90 italic font-light leading-relaxed mb-6">
+              "Arriving by private boat to the floating palace on Lake Pichola before sunset was pure magic. YOUR BRAND NAME
+              orchestrated after-hours palace tours and desert tenting in Jaisalmer with unparalleled royal
+              grace."
+            </p>
+          </div>
+          <div class="border-t border-white/10 pt-4">
+            <p class="text-xs font-semibold uppercase tracking-wider text-white">Sir Arthur & Lady Sterling</p>
+            <p class="text-[11px] text-white/50 uppercase tracking-widest mt-0.5">Royal Rajputana Grandeur • February
+              2026</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 7. CLOSING CTA BANNER (ROUNDED BUTTONS) -->
+  <!-- ========================================== -->
+  <section class="relative py-28 px-6 sm:px-12 lg:px-20 overflow-hidden" id="contact">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-r from-[#041013] via-[#082b33] to-[#041013]"></div>
+    <div
+      class="absolute inset-0 -z-10 opacity-25 mix-blend-overlay bg-[radial-gradient(#2ee6c8_1px,transparent_1px)] [background-size:24px_24px]">
+    </div>
+
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-[10px] font-semibold tracking-mega text-brand-cyan uppercase">BEGIN THE CONVERSATION</span>
+      <h2
+        class="text-4xl sm:text-5xl md:text-6xl font-light tracking-superwide text-white uppercase mt-4 mb-6 leading-tight">
+        THE WORLD IS WAITING
+      </h2>
+      <p class="text-xs sm:text-sm md:text-base text-white/75 font-light max-w-xl mx-auto leading-relaxed mb-10">
+        Contact our Managing Directors to arrange a confidential discovery session for your upcoming seasonal Indian
+        expedition.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <button id="cta-schedule-consult-btn"
+          class="btn-rounded w-full sm:w-auto inline-block bg-[#2ee6c8] hover:bg-[#25c7ad] text-[#072428] font-semibold text-xs tracking-wider uppercase px-10 py-4 transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-[0_10px_25px_rgba(46,230,200,0.35)] cursor-pointer">
+          Schedule Private Consultation
+        </button>
+        <button id="cta-view-lookbook-btn"
+          class="btn-rounded w-full sm:w-auto inline-block border border-white/30 hover:border-brand-cyan text-white hover:text-brand-cyan font-medium text-xs tracking-wider uppercase px-9 py-4 transition-all duration-300 cursor-pointer">
+          View 2026 Lookbook
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- 8. COMPREHENSIVE LUXURY FOOTER (INDIAN DESTINATIONS) -->
+  <!-- ========================================== -->
+  <footer class="bg-[#020b0d] text-white pt-20 pb-12 px-6 sm:px-12 lg:px-20 border-t border-white/10"
+    data-purpose="site-footer">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16 border-b border-white/10">
+        <!-- Brand Column -->
+        <div class="lg:col-span-2">
+          <div class="flex flex-col items-start select-none cursor-pointer mb-6" data-purpose="footer-logo">
+            <span class="text-2xl font-light tracking-ultrawide text-white uppercase leading-none">
+              YOUR BRAND NAME
+            </span>
+            <span class="text-[9px] tracking-mega text-white/70 uppercase mt-1 font-medium">
+              BESPOKE INDIAN ESCAPES
+            </span>
+          </div>
+          <p class="text-xs text-white/60 font-light leading-relaxed max-w-sm mb-6">
+            Architects of transcendent Indian journeys. Member of the Luxury Travel Association & Ultra-Luxe India
+            Guild.
+          </p>
+          <div
+            class="flex items-center space-x-3 sm:space-x-4 text-xs text-white/50 tracking-widest uppercase flex-wrap">
+            <span class="text-brand-cyan">NEW DELHI</span>
+            <span>•</span>
+            <span>MUMBAI</span>
+            <span>•</span>
+            <span>BENGALURU</span>
+            <span>•</span>
+            <span>JAIPUR</span>
+          </div>
+        </div>
+
+        <!-- Links: Destinations -->
+        <div>
+          <h5 class="text-xs uppercase tracking-widest text-brand-cyan font-semibold mb-4">Destinations</h5>
+          <ul class="space-y-2.5 text-xs text-white/70 font-light">
+            <li><a class="hover:text-brand-cyan transition-colors" href="#kashmir">Kashmir & Gulmarg</a></li>
+            <li><a class="hover:text-brand-cyan transition-colors" href="#kerala">Kerala Backwaters</a></li>
+            <li><a class="hover:text-brand-cyan transition-colors" href="#rajasthan">Rajasthan Palaces</a></li>
+            <li><a class="hover:text-brand-cyan transition-colors" href="#andaman">Andaman Archipelago</a></li>
+            <li><a class="hover:text-brand-cyan transition-colors" href="#formats">Himachal & Spiti Valley</a></li>
+            <li><a class="hover:text-brand-cyan transition-colors" href="#formats">Meghalaya & Dawki</a></li>
+          </ul>
+        </div>
+
+        <!-- Links: Experiences -->
+        <div>
+          <h5 class="text-xs uppercase tracking-widest text-brand-cyan font-semibold mb-4">Portfolios</h5>
+          <ul class="space-y-2.5 text-xs text-white/70 font-light">
+            <li><a class="hover:text-brand-cyan transition-colors" href="#formats">Royal Palace Residencies</a></li>
+            <li><a class="hover:text-brand-cyan transition-colors" href="#formats">Charter Aviation</a></li>
+            <li><a class="hover:text-brand-cyan transition-colors" href="#formats">Solar Kettuvallam Houseboats</a></li>
+            <li><a class="hover:text-brand-cyan transition-colors" href="#formats">Himalayan Glamping</a></li>
+            <li><a class="hover:text-brand-cyan transition-colors" href="#journeys">Bespoke Expeditions</a></li>
+            <li><a class="hover:text-brand-cyan transition-colors" href="#standards">Private Security Escorts</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Column (Rounded Input & Button) -->
+        <div>
+          <h5 class="text-xs uppercase tracking-widest text-brand-cyan font-semibold mb-4">Private Dispatch</h5>
+          <p class="text-xs text-white/60 font-light leading-relaxed mb-4">
+            Receive seasonal private voyage openings, rare palace suite availabilities, and curated travel essays.
+          </p>
+          <form id="newsletter-form" class="flex flex-col gap-2">
+            <input required id="newsletter-email"
+              class="bg-[#041013] border border-white/20 text-white text-xs px-4 py-2.5 rounded-full focus:border-brand-cyan focus:ring-0 placeholder-white/30"
+              placeholder="Enter your email" type="email" />
+            <button
+              class="btn-rounded bg-[#2ee6c8] hover:bg-[#25c7ad] text-[#072428] font-semibold text-xs tracking-wider uppercase py-2.5 px-6 transition-colors cursor-pointer"
+              type="submit">
+              Subscribe
+            </button>
+          </form>
+          <div id="newsletter-toast" class="hidden text-[10px] text-brand-cyan mt-2 font-mono tracking-wider">
+            ✓ Registration confirmed in confidential ledger.
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-footer / Legal -->
+      <div
+        class="pt-8 flex flex-col md:flex-row items-center justify-between text-[11px] text-white/40 font-light gap-4">
+        <div>
+          © 2026 YOUR BRAND NAME ATELIER LTD. ALL RIGHTS RESERVED.
+        </div>
+        <div class="flex items-center space-x-6 flex-wrap">
+          <a class="hover:text-white transition-colors" href="#">Privacy Protocol</a>
+          <a class="hover:text-white transition-colors" href="#">Terms of Discretion</a>
+          <a class="hover:text-white transition-colors" href="#">Aviation Compliance</a>
+          <a class="hover:text-white transition-colors" href="#">Carbon Offset Registry</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- MOBILE DRAWER NAVIGATION OVERLAY -->
+  <!-- ========================================== -->
+  <div id="drawer-backdrop"
+    class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300"></div>
+  <aside id="mobile-drawer-nav"
+    class="fixed top-0 left-0 bottom-0 w-80 max-w-[85vw] ocean-glass z-50 hidden -translate-x-full transition-transform duration-300 flex flex-col justify-between p-8 border-r border-brand-cyan/20">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-white/10 mb-8">
+        <div class="flex flex-col">
+          <span class="text-xl font-light tracking-widest text-white uppercase">YOUR BRAND NAME</span>
+          <span class="text-[9px] tracking-mega text-brand-cyan uppercase">INDIAN ATELIER</span>
+        </div>
+        <button id="drawer-close-btn" aria-label="Close Navigation"
+          class="text-white/60 hover:text-brand-cyan transition-colors p-2 focus:outline-none rounded-full hover:bg-white/5 cursor-pointer">
+          <svg class="w-6 h-6 stroke-[1.8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <nav class="space-y-5 text-sm uppercase tracking-widest font-light">
+        <div><a class="drawer-nav-link text-white hover:text-brand-cyan transition-colors block py-1"
+            href="#hero-section">00 // Overview</a></div>
+        <div><a class="drawer-nav-link text-white hover:text-brand-cyan transition-colors block py-1"
+            href="#journey-architect">01 // Journey Architect</a></div>
+        <div><a class="drawer-nav-link text-white hover:text-brand-cyan transition-colors block py-1"
+            href="#destinations">02 // Curated Escapes</a></div>
+        <div><a class="drawer-nav-link text-white hover:text-brand-cyan transition-colors block py-1"
+            href="#journeys">03 // Signature Journeys</a></div>
+        <div><a class="drawer-nav-link text-white hover:text-brand-cyan transition-colors block py-1" href="#formats">04
+            // Bespoke Formats</a></div>
+        <div><a class="drawer-nav-link text-white hover:text-brand-cyan transition-colors block py-1"
+            href="#standards">05 // Discretion Standards</a></div>
+        <div><a class="drawer-nav-link text-white hover:text-brand-cyan transition-colors block py-1" href="#journal">06
+            // Traveler Voices</a></div>
+        <div><a class="drawer-nav-link text-white hover:text-brand-cyan transition-colors block py-1" href="#contact">07
+            // Private Consultation</a></div>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-white/10 space-y-4">
+      <div class="flex items-center justify-between text-xs">
+        <span class="text-white/40 uppercase tracking-wider">Currency:</span>
+        <select data-currency-select
+          class="btn-rounded bg-transparent border border-white/20 text-white text-xs py-1.5 px-3 focus:border-brand-cyan focus:ring-0 uppercase">
+          <option class="bg-[#041013] text-white" value="INR">INR (₹)</option>
+          <option class="bg-[#041013] text-white" value="EUR">EUR (€)</option>
+          <option class="bg-[#041013] text-white" value="USD">USD ($)</option>
+          <option class="bg-[#041013] text-white" value="GBP">GBP (£)</option>
+        </select>
+      </div>
+      <button id="drawer-consult-btn"
+        class="btn-rounded w-full bg-[#2ee6c8] hover:bg-[#25c7ad] text-[#072428] font-semibold text-xs tracking-wider uppercase py-3.5 text-center transition-all cursor-pointer">
+        Book Private Call
+      </button>
+    </div>
+  </aside>
+
+  <!-- ========================================== -->
+  <!-- GLOBAL INTERACTIVE MODAL DIALOG CONTAINER -->
+  <!-- ========================================== -->
+  <div id="global-modal-overlay"
+    class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden opacity-0 transition-opacity duration-300 flex items-center justify-center p-4 sm:p-6 lg:p-8">
+    <div id="modal-inner-container" class="scale-95 opacity-0 transition-all duration-300 w-full flex justify-center">
+      <!-- Modal contents injected by ModalController -->
+    </div>
+  </div>
+
+  <!-- Main JavaScript Application Entry -->
+</body>
+
+</html>
