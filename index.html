@@ -242,7 +242,17 @@
   </div>
 
   <!-- Entry Script for Vite -->
-  <script type="module" src="/src/main.jsx"></script>
+  <link rel="stylesheet" href="/index-BB_x8O4h.css" />
+<script type="module">
+document.querySelectorAll('img[src^="/images/"]').forEach(i=>i.src=i.getAttribute('src').replace('/images/','/'));
+fetch('/index-BgNZURSp.js').then(r=>r.text()).then(t=>{
+  const u=URL.createObjectURL(new Blob([t.split('/images/').join('/')],{type:'text/javascript'}));
+  const s=document.createElement('script');s.type='module';s.src=u;
+  s.onload=()=>{if(document.readyState!=='loading')document.dispatchEvent(new Event('DOMContentLoaded'))};
+  document.body.appendChild(s);
+});
+</script>
+
 </body>
 
 </html>
